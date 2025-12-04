@@ -1,0 +1,555 @@
+*{
+    font-family: serif;
+    margin: 0;
+    border: 0;
+    padding: 0;box-sizing: border-box;
+}
+
+body,nav{
+    padding: 0.5em 1em;
+}
+
+nav{
+    background-color: rgba(128, 128, 128, 0.1);
+    /* border: 1px solid #000; */
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;   
+}
+
+nav > div {
+    display: flex;
+    /* border: 1px solid #000; */
+}
+
+.sitename{
+    gap: 0.5em;
+    align-items: center;
+}
+
+.site-logo{
+    border-radius: 200px;
+    width: 30px;
+}
+
+.nav-ul{
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.nav-ul > li > a{
+    font-family: sans-serif;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: grey;
+}
+
+.nav-last-child{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.search-input{
+    flex: 1;
+    /* border: 1px solid black; */
+    border-radius: 50px;
+    min-width: 100px;
+    display: flex;
+    background-color: #fff;
+    padding-right: 0.5em;
+}
+
+.search-input > input{
+    width: 100%;
+    padding: 1em;
+    border-radius: 50px;
+}
+
+/* .inner-search-svg{
+
+} */
+
+input[type="search"]:focus{
+    outline: none;
+    border: none;
+}
+
+.search-svg{
+    /* border: 1px solid #000; */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.icon-svg{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.profile{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.profile-picture{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.profile-picture > img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* background-color: #fff; */
+}
+
+.first-section{
+    background-image: url('images/Homepage/1.avif');
+    margin-top: 1em;
+    border-radius: 25px;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    background-position-y: -20em;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: end;
+    /* justify-content: space-between; */
+    gap: 5em;
+    padding: 2em 1em;
+    color: #fff;
+    position: relative;
+}
+
+/* .first-section div{
+    flex: 1;
+} */
+
+.first-section > div > h1{
+    margin-bottom: 0.5em;
+}
+
+.first-section > div > p{
+    font-size: 0.8em;
+}
+
+.first-section  div h1, .first-section div p{
+    font-family: sans-serif;
+}
+
+.location-socials {
+    display: flex;
+    gap: 2.5em;
+    width: 100%;
+    justify-content: end;
+}
+
+.location-socials > div > address > p{
+    margin-top: 0.5em;
+}
+
+.location-socials div h3{
+    font-family: sans-serif;
+}
+
+.location-socials div ul li {
+    list-style: none;
+    /* font-family: sans-serif; */
+    margin-top: 0.5em;
+}
+
+.travel-info{
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    background-color: #fff;
+    color: #000;
+    padding: 1em;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1em;
+    margin-right: 1em;
+    /* width: 100%; */
+}
+
+.travel-info > div {
+    display: flex;
+}
+
+.transportation{
+    /* justify-content: space-between; */
+    gap: 2em;
+}
+
+.transportation  div{
+    font-family: sans-serif;
+    border: 1px solid #000;
+    font-size: 0.8em;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+}
+
+.destination-date{
+    /* display: flex; */
+    gap: 1em;
+    align-items: center;
+}
+
+.destination-date > div > label{
+    font-size: 0.85em;
+    font-family: sans-serif;
+}
+
+.destination > div, .departure > div, .guest{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid#000; */
+    padding: 0.5em;
+    border-radius: 25px;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.destination > div > select, .departure > div > input, .guest > select{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: grey;
+}
+
+.destination > div > select > option{
+    color: grey;
+}
+
+.Guest{
+    /* display: flex; */
+    flex-direction: column;
+}
+
+.guest{
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 0.5em;
+}
+
+.guest > select{
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.selected-guest{
+    color: grey;
+    background-color: transparent;
+    /* margin-left: 0.5em; */
+}
+
+.guest-list{
+    display: none;
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* for Safari*/
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+.guest-list.open{
+    display: block;
+}
+
+.guest-list li{
+    list-style: none;
+    color: grey;
+}
+
+/* .guest select{
+    appearance: none; Standard
+    -webkit-appearance: none; Chrome/Safari
+    -moz-appearance: none; Firefox
+    The css above is to remove the default arrow in select
+} */
+
+.chevron{
+    position: absolute;
+    /* pointer-events: none; */
+    top: 30%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.search-btn,.search_btn > button{
+    width: 100%;
+    margin-top: 1em;
+    padding: 0.8em;
+    border-radius: 25px;
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.Filters{
+    display: flex;
+    gap: 0.5em;
+    margin-top: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* .Filters > :first-child{
+    color: pink;
+} */
+
+.Filters > :last-child {
+    /* flex-direction: row; */
+    display: flex;
+    gap: 0.5em;
+    /* overflow: none; */
+    /* width: 80%; */
+}
+
+.Filters > :last-child > div {
+    border: 1px solid #808080;
+    padding: 0.5em;
+    font-size: 0.8em;
+    border-radius: 25px;
+    /* min-width: 100px;
+    overflow: scroll; */
+}
+
+/* ,under */
+
+@media (max-width:564px) {
+    .first-section{
+        /* align-items: flex-end; */
+        /* width: 50%; */
+        flex-direction: column;
+        /* justify-conten; */
+        align-items: flex-start;
+        /* gap: 100em; */
+        /* padding: 0em; */
+    }
+
+    /* .first-section > div{
+        color: red;
+        width: 100%;
+        border: 1px solid #000;
+    } */
+
+    .location-socials, .pitch{
+        width: 50%;
+    }
+
+    .location-socials{
+        margin-top: -1em;
+        /* gap: -5em; */
+    }
+
+    .location-socials > :first-child{
+        /* overflow: scroll; */
+        /* flex-wrap: nowrap; */
+        font-size: 0.8em;
+    }
+
+    .travel-info{
+        width: 50%;
+        /* display: none; */
+        right: -0.5em;
+        background-color: rgba(128, 128, 128, 0.1);
+        backdrop-filter: blur(10px);
+        /* -webkit-backdrop-filter: blur(10px); for safari */
+    }
+
+    .transportation{
+        /* overflow: scroll; */
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+
+    .Filters > :last-child {
+    /* flex-direction: row; */
+    display: flex;
+    gap: 0.5em;
+    /* overflow: scroll; */
+    flex-wrap: wrap;
+    /* width: 80%; */
+}
+
+/* .departure > div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+} */
+}
+
+@media (max-width: 710px) {
+    /* Two choices for this shit either I move it to  a smaller media of 400-360px or properly arrange it, once I'm through*/
+    /* .travel-info{
+        width: 250px;
+        height: 300px;
+    } */
+    .transportation{
+        gap: 0em;
+        flex-wrap: wrap;
+    }
+
+    .destination-date{
+        gap: 0em;
+        flex-wrap: wrap;
+    }
+    /* I may move this shit to around 400 - 360 px. NOTE: I'm talking about the first-section */
+
+    .first-section{
+        background-position: bottom;
+        gap: 2em;
+        padding: 1em;
+    }
+
+    .first-section > div > h1{
+        font-size: 1.5em;
+    }
+
+    .location-socials{
+        gap: 1.5em;
+    }
+
+    nav{
+        transition: opacity 0.5s;
+        opacity: 1;
+    }
+    
+    nav.nav-active{
+        opacity: 0;
+    }
+
+    .search-svg{
+        display: none;
+    }
+
+    .profile,.profile-picture,.profile-info{
+        display: none;
+    }
+
+    .nav-ul-parent{
+        display: none;
+    }
+
+    .nav-menu-icon > button{
+        background: none;
+    }
+
+    .mobile-nav{
+        background-color: rgba(128, 128, 128, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /*for safari*/
+        position: absolute;
+        top: 0;
+        right: 1em;
+        /* left: 2em; */
+        z-index: 10;
+        pointer-events: auto;
+        /* cursor: crosshair; */
+        margin-top: 0.5em;
+        /* margin-right: 1em; */
+        padding: 0.5em;
+        border-radius: 15px;
+        width: 250px;
+        transform: translateY(-300px);
+        transition: transform 0.5s, opacity 0.5s;
+        opacity: 0;
+    }
+
+    .mobile-nav.mobile-nav-active{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .mobile-nav > ul{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        list-style: none;
+    }
+
+    .mobile-nav > ul > li > a{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .mobile-profile{
+        display: flex;
+        gap: 0.5em;
+        font-weight: bold;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        margin-bottom: 0.5em;
+        align-items: center;
+    }
+
+    .mobile-profile-picture{
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+    }
+
+    .mobile-profile-picture > img{
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+    }
+
+    .mobile-nav-menu{
+        position: fixed;
+        top: 0;
+        right: 1em;
+        margin-top: 0.7em;
+        margin-right: 0.3em;
+    }
+
+}
+
+@media (min-width: 710.5px) {
+    .inner-search-svg, .mobile-profile, .mobile-nav, .nav-menu-icon{
+        display: none;
+    }
+}

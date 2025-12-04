@@ -1,0 +1,384 @@
+<!-- <?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // var_dump($_POST);
+    // exit; //Note: exit is always essential to leave a request so that you won't add unneccessary data.
+    error_log(print_r($_POST, true));
+    echo json_encode([
+        "status" => "success",
+        "guests" => $_POST["guests"] ?? null
+    ]);
+    exit; //VERY IMPORTANT
+}
+echo('heldddl');
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- General nav -->
+    <nav>
+      <div class="sitename">
+        <img src="images/download.png" alt="antaris logo" class="site-logo" />
+        <h4>ANTARIS</h4>
+      </div>
+
+      <div class="nav-ul-parent">
+        <ul class="nav-ul">
+          <li class="nav-list active"><a href="">Home</a></li>
+          <li class="nav-list"><a href="">About Us</a></li>
+          <li class="nav-list"><a href="">Our Services</a></li>
+          <li class="nav-list"><a href="">Travel Packages</a></li>
+        </ul>
+      </div>
+
+      <!-- needed to give this a class name so i can flex it once-->
+      <div class="nav-last-child">
+        <div class="search-input">
+          <input type="search" placeholder="Search here." />
+          <div class="inner-search-svg">
+            <span>
+              <svg
+                height="48"
+                viewBox="0 0 17 48"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="black"
+              >
+                <path
+                  d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z"
+                ></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="search-svg">
+          <span>
+            <svg
+              height="48"
+              viewBox="0 0 17 48"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+            >
+              <path
+                d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+
+        <div class="icon-svg">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-6.7-4.3-9.5-8.5C-1 7.5 2.2 2 7 2c2.3 0 4 1.3 5 2.6C13 3.3 14.7 2 17 2c4.8 0 8 5.5 4.5 10.5C18.7 16.7 12 21 12 21z"/>
+         </svg>
+        </div>
+
+        <div class="profile">
+          <div class="profile-picture">
+            <img src="images/person0.jpg" alt="profile picture" />
+          </div>
+          <div class="profile-info">
+            <p>Raviel Ivansia</p>
+            <p>32 points</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-menu-icon">
+        <button aria-label="menu" class="menu-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18">
+            <polyline
+              id="globalnav-menutrigger-bread-bottom"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              points="2 12, 16 12"
+              class="globalnav-menutrigger-bread globalnav-menutrigger-bread-bottom"
+            >
+              <animate
+                id="globalnav-anim-menutrigger-bread-bottom-open"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"
+              ></animate>
+              <animate
+                id="globalnav-anim-menutrigger-bread-bottom-close"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"
+              ></animate>
+            </polyline>
+
+            <polyline
+              id="globalnav-menutrigger-bread-top"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              points="2 5, 16 5"
+              class="globalnav-menutrigger-bread globalnav-menutrigger-bread-top"
+            >
+              <animate
+                id="globalnav-anim-menutrigger-bread-top-open"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"
+              ></animate>
+              <animate
+                id="globalnav-anim-menutrigger-bread-top-close"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"
+              ></animate>
+            </polyline>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav content -->
+    <div class="mobile-nav">
+      <!-- Mo
+       bile Profile -->
+      <div class="mobile-profile">
+        <div class="mobile-profile-picture">
+          <img src="images/person0.jpg" alt="profile picture" />
+        </div>
+        <div class="mobile-profile-info">
+          <p>Raviel Ivansia</p>
+          <p>32 points</p>
+        </div>
+      </div>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Our Services</a></li>
+        <li><a href="">Travel Packages</a></li>
+      </ul>
+      <div class="nav-menu-icon mobile-nav-menu">
+        <button aria-label="menu" class="close-menu-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18">
+            <polyline
+              id="globalnav-menutrigger-bread-bottom"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              points="2 12, 16 12"
+              class="globalnav-menutrigger-bread globalnav-menutrigger-bread-bottom"
+            >
+              <animate
+                id="globalnav-anim-menutrigger-bread-bottom-open1"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"
+              ></animate>
+              <animate
+                id="globalnav-anim-menutrigger-bread-bottom-close1"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"
+              ></animate>
+            </polyline>
+
+            <polyline
+              id="globalnav-menutrigger-bread-top"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              points="2 5, 16 5"
+              class="globalnav-menutrigger-bread globalnav-menutrigger-bread-top"
+            >
+              <animate
+                id="globalnav-anim-menutrigger-bread-top-open1"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"
+              ></animate>
+              <animate
+                id="globalnav-anim-menutrigger-bread-top-close1"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"
+              ></animate>
+            </polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <section class="first-section">
+      <div class="pitch">
+        <h1>
+          Discover Your Next Amazing Journey Excitement !
+        </h1>
+
+        <p>
+          Embark on an unforgettable and breath taking outdoor adventure that will leave you in nature's wonders
+        </p>
+      </div>
+      <div class="location-socials">
+        <div>
+          <h3>Location</h3>
+          <address>
+            Antaris Oceanfront Resort <br> 123 Serenity Bay Road <br>Koh Muai, Indonesia 7899 <br> <p>Monday - Sunday | 08:00 - 22:00 <br>(local time)</p>
+          </address>
+        </div>
+        <div>
+          <h3>Social Media</h3>
+          <ul>
+            <li>Instagram</li>
+            <li>LinkedIn</li>
+            <li>Tiktok</li>
+            <li>Facebook</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="travel-info">
+        <div class="transportation">
+          <div>Travel</div>
+          <div>Hotel</div>
+          <div>Flight</div>
+          <div>Destination</div>
+        </div>
+
+        <div class="destination-date">
+          <div class="destination">
+            <label for="Location">Location</label>
+            <div>
+              <!-- Location pin icon -->
+              <svg width="16" height="20" viewBox="0 0 24 24" fill="none" 
+      stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z" />
+               <circle cx="12" cy="10" r="3" />
+             </svg>
+              <select name="" id="">
+                <option value="">Bali Indonesia</option>
+                <option value="">dfndfk </option>
+              </select>
+
+            </div>
+
+          </div>
+          <div class="departure">
+            <label for="calendar">Departure Month</label>
+            <div>
+              <input type="date" name="" id="">
+            </div>
+          </div>
+        </div>
+
+        <div class="Guest">
+          <label for="guest">Guests</label>
+          <div class="guest">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="20" fill="none" stroke="grey" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" role="img">
+              <circle cx="12" cy="8.5" r="3.1"/>
+              <path d="M4 20c0-3.5 3.6-6.5 8-6.5s8 3 8 6.5"/>
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-opacity="0.08"/>
+            </svg>
+            <!-- The select directly below this shit is for guest select. To send the data to the backend. I'll use ajax instead of normal php way to send it to the backend cus I'm trying to prevent reloading-->
+            <select name="Guest" id="select">
+              <option value="">Select guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+            <!-- <label for="select" class="chevron" id="chevron">
+              <svg width="12" height="8" viewBox="0 0 12 8">
+                <path d="M1 1l5 5 5-5" fill="none" stroke="grey" stroke-width="1.5"/>
+              </svg>
+            </label> -->
+            <div>
+              <button class="selected-guest">
+                Select guests
+              </button>
+              <ul class="guest-list">
+                <li data-value="1">1 Guest</li>
+                <li data-value="2">2 Guests</li>
+                <li data-value="3">3 Guests</li>
+                <li data-value="4">4 Guests</li>
+              </ul>
+              <span class="chevron" id="chevron">
+                <svg width="12" height="8" viewBox="0 0 12 8">
+                  <path d="M1 1l5 5 5-5" fill="none" stroke="grey" stroke-width="1.5"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="search_btn">
+          <button>Search Now</button>
+        </div>
+          
+        <div class="Filters">
+          <div>Filters:</div>
+          <div>
+            <div>Bali Indonesia</div>
+            <div>Nusa Penida</div>
+            <div>Kuta Bali</div>
+            <div>Sanur</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="underline"></div>
+    <script src="index.js"></script>
+  </body>
+</html>

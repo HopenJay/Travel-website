@@ -376,12 +376,13 @@ input[type="search"]:focus{
     .location-socials{
         margin-top: -1em;
         /* gap: -5em; */
+        font-size: 0.8em;
     }
 
     .location-socials > :first-child{
         /* overflow: scroll; */
         /* flex-wrap: nowrap; */
-        font-size: 0.8em;
+        /* font-size: 0.8em; */
         margin-right: 1em;
     }
 

@@ -96,3 +96,20 @@ chevron.addEventListener("click", () => {
         })
     })
 });
+
+// For scroll fading
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show"); //Fade IN
+        } else {
+            entry.target.classList.remove("show"); //Fad OOUT
+        }
+    });
+}, {
+    threshold: 0.1 //20% of element visible = trigger
+});
+
+document.querySelectorAll(".fade").forEach(el => {
+    observer.observe(el);
+})

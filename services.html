@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- General nav -->
+    <nav>
+      <div class="sitename">
+        <img src="images/download.png" alt="antaris logo" class="site-logo" />
+        <h4>ANTARIS</h4>
+      </div>
+
+      <div class="nav-ul-parent">
+        <ul class="nav-ul">
+          <li class="nav-list active"><a href="index.html">Home</a></li>
+          <li class="nav-list"><a href="index.html#about">About Us</a></li>
+          <li class="nav-list"><a href="services.html">Our Services</a></li>
+          <li class="nav-list"><a href="Travel-Packages.html">Travel Packages</a></li>
+        </ul>
+      </div>
+
+      <!-- needed to give this a class name so i can flex it once-->
+      <div class="nav-last-child">
+        <div class="search-input">
+          <input type="search" placeholder="Search here." />
+          <div class="inner-search-svg">
+            <span>
+              <svg
+                height="48"
+                viewBox="0 0 17 48"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="black"
+              >
+                <path
+                  d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z"
+                ></path>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="search-svg">
+          <span>
+            <svg
+              height="48"
+              viewBox="0 0 17 48"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+            >
+              <path
+                d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+
+        <div class="icon-svg">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-6.7-4.3-9.5-8.5C-1 7.5 2.2 2 7 2c2.3 0 4 1.3 5 2.6C13 3.3 14.7 2 17 2c4.8 0 8 5.5 4.5 10.5C18.7 16.7 12 21 12 21z"/>
+         </svg>
+        </div>
+
+        <div class="profile">
+          <div class="profile-picture">
+            <img src="images/person0.jpg" alt="profile picture" />
+          </div>
+          <div class="profile-info">
+            <p>Raviel Ivansia</p>
+            <p>32 points</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-menu-icon">
+        <button aria-label="menu" class="menu-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18">
+            <polyline
+              id="globalnav-menutrigger-bread-bottom"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              points="2 12, 16 12"
+              class="globalnav-menutrigger-bread globalnav-menutrigger-bread-bottom"
+            >
+              <animate
+                id="globalnav-anim-menutrigger-bread-bottom-open"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"
+              ></animate>
+              <animate
+                id="globalnav-anim-menutrigger-bread-bottom-close"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"
+              ></animate>
+            </polyline>
+
+            <polyline
+              id="globalnav-menutrigger-bread-top"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              points="2 5, 16 5"
+              class="globalnav-menutrigger-bread globalnav-menutrigger-bread-top"
+            >
+              <animate
+                id="globalnav-anim-menutrigger-bread-top-open"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"
+              ></animate>
+              <animate
+                id="globalnav-anim-menutrigger-bread-top-close"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"
+              ></animate>
+            </polyline>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile nav content -->
+    <div class="mobile-nav">
+      <!-- Mo
+       bile Profile -->
+      <div class="mobile-profile">
+        <div class="mobile-profile-picture">
+          <img src="images/person0.jpg" alt="profile picture" />
+        </div>
+        <div class="mobile-profile-info">
+          <p>Raviel Ivansia</p>
+          <p>32 points</p>
+        </div>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="Travel-Packages.html">Travel Packages</a></li>
+      </ul>
+      <div class="nav-menu-icon mobile-nav-menu">
+        <button aria-label="menu" class="close-menu-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18">
+            <polyline
+              id="globalnav-menutrigger-bread-bottom"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              points="2 12, 16 12"
+              class="globalnav-menutrigger-bread globalnav-menutrigger-bread-bottom"
+            >
+              <animate
+                id="globalnav-anim-menutrigger-bread-bottom-open1"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"
+              ></animate>
+              <animate
+                id="globalnav-anim-menutrigger-bread-bottom-close1"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"
+              ></animate>
+            </polyline>
+
+            <polyline
+              id="globalnav-menutrigger-bread-top"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              points="2 5, 16 5"
+              class="globalnav-menutrigger-bread globalnav-menutrigger-bread-top"
+            >
+              <animate
+                id="globalnav-anim-menutrigger-bread-top-open1"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"
+              ></animate>
+              <animate
+                id="globalnav-anim-menutrigger-bread-top-close1"
+                attributeName="points"
+                keyTimes="0;0.5;1"
+                dur="0.24s"
+                begin="indefinite"
+                fill="freeze"
+                calcMode="spline"
+                keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1"
+                values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"
+              ></animate>
+            </polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <section class="fade">
+        <div>
+            <p>
+                Here at ANTARIS we provide only the best of the best services.
+            </p>
+            <p>
+                Our services include:
+            </p>
+        </div>
+        <div id="wrap">
+            <button id="left">&lt;</button>
+            <button id="right">&gt;</button>
+            <div id="sliderr">
+                <div class="slidee">
+                  <div class="adventure">
+                    <p>ADVENTURE</p>
+                  </div>
+                </div>
+                <div class="slidee">
+                  <div class="concierge">
+                    <p>CONCIERGE</p>
+                  </div>
+                </div>
+                <div class="slidee">
+                  <div class="events">
+                    <p>EVENTS</p>
+                  </div>
+                </div>
+                <div class="slidee">
+                  <div class="wellness">
+                    <p>WELLNESS <br> & <br>RELAXATION</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+          <ul>
+            <li>VIP ACCESS AND COMFORT</li>
+            <li>Skip-the-line passes at attractions</li>
+            <li>Private entrances or after-hours tours</li>
+            <li>Luxury picnic setups in scenic locations</li>
+            <li>Helicopter drop-offs/pickups at remote sites</li>
+          </ul>
+        </div>
+    </section>
+
+    <section class="sixth-section fade">
+      <div>
+        <div>
+          Get Ready Your Thrilling 
+          <br>
+          Journey Into Nature Today
+        </div>
+        <div>
+          Excited to plan your next adventure? Let's explore details to make it an 
+          <br>unforgettable experience!
+        </div>
+        <div>
+          <button>
+            Get Started Now
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <div>
+            <img src="images/download.png" alt="antaris logo" class="sixth-section-site-logo" />         
+            <p>ANTARIS</p>
+          </div>
+
+          <div>Raise Funds, Make Decisions, And Move Faster-With Reports Powered By AI.</div>
+        </div>
+
+        <div>
+          <!-- TODO: 08/12/2025 I need table to pass through here. So I need to knw table again will do it later, I've forgotten the syntax structure -->
+           <!-- Update 09/12/2025 I've done it -->
+           <table class="clean-table">
+            <thead>
+              <tr>
+                <th>Menu</th>
+                <th>Features</th>
+                <th>Resources</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Home</td>
+                <td>Dashboard Analytics</td>
+                <td>Getting Started Guide</td>
+              </tr>
+              <tr>
+                <td>About Us</td>
+                <td>Account Connection</td>
+                <td>How Finara Compares</td>
+              </tr>
+              <tr>
+                <td>Pricing</td>
+                <td>Billing & Invoice</td>
+                <td>Blog</td>
+              </tr>
+              <tr>
+                <td>Contact</td>
+                <td>Transaction</td>
+                <td>Support</td>
+              </tr>
+            </tbody>
+           </table>
+        </div>
+      </div>
+
+      <div class="about_us">
+        <div class="underline"></div>
+      </div>
+
+      <footer>
+        <div>
+          <p>Terms</p>
+          <p>Privacy</p>
+          <p>Cookies</p>
+          <p>Legal</p>
+          <p>Recalls</p>
+        </div>
+
+        <div>
+          Copyright &copy; 2025 Finara. All rights reserved.
+        </div>
+
+        <div>
+          <!-- TODO: 09/12/2025 Remember to put the icons later. -->
+           <div>
+            <img src="images/Homepage/Footer-img/download.png" alt="">
+           </div>
+           <div>
+            <img src="images/Homepage/Footer-img/download (1).png" alt="">
+           </div>
+           <div>
+            <img src="images/Homepage/Footer-img/download (2).png" alt="">
+           </div>
+           <div>
+            <img src="images/Homepage/Footer-img/download (3).png" alt="">
+           </div>
+           <div>
+            <img src="images/Homepage/Footer-img/download (4).png" alt="">
+           </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="services.js"></script>
+    <!-- <script src="index.js"></script> -->
+</body>
+</html>

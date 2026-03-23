@@ -1,0 +1,153 @@
+section{
+    margin-top: 7.5em;
+}
+
+section > :first-child p {
+    font-family: sans-serif;
+}
+
+section > :first-child > :last-child{
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    /* font-family: sans-serif; */
+}
+
+/* Wrapper */
+#wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* height: 60vh; */
+    margin: auto;
+    /* border: 1px solid #000; */
+}
+
+ /* slider */ 
+ #sliderr{
+    display: flex;
+    overflow-x: scroll;
+    /* For Webkit browsers (Chrome, Safari, Edge */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* smooth on iOS */
+ }
+
+ #sliderr::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+ }
+
+ /* Slides */
+ .slidee{
+    flex: 0 0 100%; /* 100% width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    /* height: 200px ; example height */
+    /* background: #ddd; example styling */
+    /* border: 1px solid pink; */
+    box-sizing: border-box;
+    width: 100%;
+    scroll-snap-align: start;
+    border-radius: 15px;
+ }
+
+ /* Buttons */
+ #left, #right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 25px;
+ }
+
+ #left {
+    left: 10px;
+ }
+
+ #right {
+    right: 10px;
+ }
+
+ .adventure, .concierge, .events, .wellness{
+   display: flex;
+   height: 300px;
+   width: 100%;
+   border-radius: 15px;
+   gap: 0.3em;
+   /* flex-wrap: wrap; */
+   background-color: rgba(0, 0, 0, 0.2);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-blend-mode: overlay;
+   display: flex;
+   /* place-content: center; */
+   align-items: end;
+   justify-content: center;
+   padding-bottom: 0.3em;
+   overflow: hidden;
+ }
+
+ .adventure > p, .concierge > p, .events > p, .wellness > p{
+   color: rgba(255, 255, 255, 1.0);
+   opacity: 0.65;
+   font-size: 1.5em;
+   font-weight: bolder;
+ }
+
+ .adventure{
+   background-image: url("images/select/adventure\ n\ activities/istockphoto-1415358240-612x612.jpg");
+ }
+
+ .concierge{
+   background-image: url("images/select/concierge/istockphoto-1146354837-612x612.jpg");
+   background-position: top;
+ }
+
+ .events{
+   background-image: url("images/select/events/istockphoto-538483378-612x612.jpg");
+ }
+
+ .wellness{
+   background-image: url("images/select/Wellness\ n\ relaxation/istockphoto-1479350890-612x612.jpg");
+   background-color: rgba(0, 0, 0, 0.5);
+ }
+
+ .wellness > p{
+   /* color: #fff;
+   opacity: 1; */
+   text-align: center;
+ }
+
+section > :last-child{
+   margin-top: 1.5em;
+   /* background-color: rgba(128, 128, 128, 0.3); */
+   padding: 0.5em;
+   border-radius: 25px;
+   color: #fff;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+ section > :last-child > ul > li{
+   font-size: 1.5em;
+   font-family: sans-serif;
+   list-style: none;
+   margin-top: 0.5em;
+ }
+
+ /* .tour > img {
+   width: 100%;
+   height: 100%;
+   border-radius: 15px;
+ } */

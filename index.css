@@ -39,7 +39,6 @@ nav{
     -webkit-backdrop-filter: blur(10px); /*For safari*/
     z-index: 100;
     padding: 1.5em;
-    margin-left: -0.63em;
 }
 
 nav > div {
@@ -1154,6 +1153,7 @@ footer{
     nav{
         transition: opacity 0.5s;
         opacity: 1;
+        margin-left: -0.63em;
     }
     
     nav.nav-active{

@@ -39,6 +39,7 @@ nav{
     -webkit-backdrop-filter: blur(10px); /*For safari*/
     z-index: 100;
     padding: 1.5em;
+    margin-left: -0.63em;
 }
 
 nav > div {

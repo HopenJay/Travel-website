@@ -1,1268 +1,163 @@
-*{
-    font-family: serif;
+/* This is the universal box-sizing rule helps to deal with oveflow issue caused by border problem */
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    /* font-family: serif; */
     margin: 0;
     border: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    height: 100vh;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
-body,nav{
-    padding: 0.5em 1em;
-}
-
-/* scroll animation */
-.fade{
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.5s ease, transform 0.6s ease;
-}
-
-.fade.show{
-    opacity: 1;
-    transform: translateY(0);
-}
-
-nav{
-    background-color: rgba(128, 128, 128, 0.1);
-    /* border: 1px solid #000; */
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;   
+/* nav */
+nav {
+    padding: 0.3em;
     position: fixed;
-    width: 96.5%;
+    width: 100%;
+    z-index: 1;
+}
+
+nav > div{
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgba(128, 128, 128, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /*For safari*/
-    z-index: 100;
-    padding: 1.5em;
-}
-
-nav > div {
-    display: flex;
-    /* border: 1px solid #000; */
-}
-
-.sitename{
-    gap: 0.5em;
-    align-items: center;
-}
-
-.site-logo{
-    border-radius: 200px;
-    width: 30px;
-}
-
-.nav-ul{
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    align-items: center;
-}
-
-.nav-ul > li > a{
-    font-family: sans-serif;
-    font-size: 0.8em;
-    text-decoration: none;
-    color: grey;
-}
-
-.nav-last-child{
-    /* border: 1px solid black; */
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-}
-
-.search-input{
-    flex: 1;
-    /* border: 1px solid black; */
-    border-radius: 50px;
-    min-width: 100px;
-    display: flex;
-    background-color: #fff;
-    padding-right: 0.5em;
-}
-
-.search-input > input{
-    width: 100%;
-    padding: 1em;
-    border-radius: 50px;
-}
-
-/* .inner-search-svg{
-
-} */
-
-input[type="search"]:focus{
-    outline: none;
     border: none;
-}
-
-.search-svg{
-    /* border: 1px solid #000; */
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000;
-}
-
-.icon-svg{
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-}
-
-.profile{
-    display: flex;
+    padding: 0.5em;
     gap: 0.5em;
-    align-items: center;
 }
 
-.profile-picture{
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
+nav > div > img{
+    width: 30px;
+    border-radius: 50px;
+    /* display: flex; */
 }
 
-.profile-picture > img{
-    border-radius: 50%;
+body > :nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-rows: 100vh;*/
+    height: 100%;
     width: 100%;
+    /* place-content: center; */
+}
+
+body >  :nth-child(2) > div{
+    /* border: 1px solid #000; */
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-}
-
-.profile-info{
-    display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
-    /* background-color: #fff; */
-}
-
-.first-section{
-    background-image: url('images/Homepage/1.avif');
-    margin-top: 7.5em;
-    border-radius: 25px;
-    height: 80vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-position: center; */
-    background-position-y: -20em;
+    background-image: url("images/Homepage/section-2\(search\ countries\)/Chureito-Pagoda.jpg");
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
+}
+
+fieldset{
     display: flex;
-    align-items: end;
-    /* justify-content: space-between; */
-    gap: 5em;
-    padding: 2em 1em;
-    color: #fff;
-    position: relative;
-}
-
-/* .first-section div{
-    flex: 1;
-} */
-
-.first-section > div > h1{
-    margin-bottom: 0.5em;
-}
-
-.first-section > div > p{
-    font-size: 0.8em;
-}
-
-.first-section  div h1, .first-section div p{
-    font-family: sans-serif;
-}
-
-.location-socials {
-    display: flex;
-    gap: 2.5em;
-    width: 100%;
-    justify-content: end;
-}
-
-.location-socials > div > address > p{
-    margin-top: 0.5em;
-}
-
-.location-socials div h3{
-    font-family: sans-serif;
-}
-
-.location-socials div ul li {
-    list-style: none;
-    /* font-family: sans-serif; */
-    margin-top: 0.5em;
-}
-
-.travel-info{
-    /* background-color: rgba(255, 255, 255, 0.5); */
-    background-color: #fff;
-    color: #000;
-    padding: 1em;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 1em;
-    margin-right: 1em;
-    /* width: 100%; */
-}
-
-.travel-info > div {
-    display: flex;
-}
-
-.transportation{
-    /* justify-content: space-between; */
-    gap: 2em;
-}
-
-.transportation  div{
-    font-family: sans-serif;
-    border: 1px solid #000;
-    font-size: 0.8em;
-    padding: 0.5em 1em;
-    border-radius: 25px;
-}
-
-.destination-date{
-    /* display: flex; */
-    gap: 1em;
-    align-items: center;
-}
-
-.destination-date > div > label{
-    font-size: 0.85em;
-    font-family: sans-serif;
-}
-
-.destination > div, .departure > div, .guest{
-    display: flex;
-    align-items: center;
-    /* border: 1px solid#000; */
-    padding: 0.5em;
-    border-radius: 25px;
-    background-color: rgba(128, 128, 128, 0.1);
-}
-
-.destination > div > select, .departure > div > input, .guest > select{
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: grey;
-}
-
-.destination > div > select > option{
-    color: grey;
-}
-
-.Guest{
-    /* display: flex; */
     flex-direction: column;
-}
-
-.guest{
-    display: flex;
-    align-items: center;
-    position: relative;
-    gap: 0.5em;
-}
-
-.guest > select{
-    position: absolute;
-    pointer-events: none;
-    opacity: 0;
-}
-
-.selected-guest{
-    color: grey;
-    background-color: transparent;
-    /* margin-left: 0.5em; */
-}
-
-.guest-list{
-    display: none;
-    position: absolute;
+    gap: 2em;
+    border-radius: 20px;
+    /* background-image: url("images/Homepage/1.avif"); */
     background-color: rgba(128, 128, 128, 0.1);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* for Safari*/
-    padding: 0.5em 1em;
-    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px); /*For safari*/
+    border: none;
 }
 
-.guest-list.open{
-    display: block;
-}
-
-.guest-list li{
-    list-style: none;
-    color: grey;
-}
-
-/* .guest select{
-    appearance: none; Standard
-    -webkit-appearance: none; Chrome/Safari
-    -moz-appearance: none; Firefox
-    The css above is to remove the default arrow in select
-} */
-
-.chevron{
-    position: absolute;
-    /* pointer-events: none; */
-    top: 30%;
-    right: 5%;
-    cursor: pointer;
-}
-
-.search-btn,.search_btn > button{
-    width: 100%;
-    margin-top: 1em;
-    padding: 0.8em;
-    border-radius: 25px;
-    background-color: #000;
-    color: #fff;
-    font-family: sans-serif;
-}
-
-.Filters{
+fieldset > div{
     display: flex;
-    gap: 0.5em;
-    margin-top: 1em;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/* .Filters > :first-child{
-    color: pink;
-} */
-
-.Filters > :last-child {
-    /* flex-direction: row; */
-    display: flex;
-    gap: 0.5em;
-    /* overflow: none; */
-    /* width: 80%; */
-}
-
-.Filters > :last-child > div {
-    border: 1px solid #808080;
-    padding: 0.5em;
-    font-size: 0.8em;
-    border-radius: 25px;
-    /* min-width: 100px;
-    overflow: scroll; */
-}
-
-.about_us{
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    margin: 1em 0em;
-}
-
-.underline{
-    border: 1px solid grey;
-    flex: 1;
-}
-
-.about_us>p{
-    font-family: sans-serif;
-}
-
-.second-section-intro > p{
-    font-family: sans-serif;
-    font-weight: 500;
-}
-
-.second-section-intro > p > span{
-    font-family: sans-serif;
-    color: grey;
-}
-
-.clip-image{
-    /* border: 1px solid #000; */
-    /* display: flex; */
-    /* width: 100%; */
-    border-radius: 10px;
-    margin-top: 1em;
-    height: 40vh;
-    background-image: url("images/Homepage/2.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 1em;
-    overflow: hidden;
-}
-
-.clip-image > div{
-    /* border: 1px solid #000; */
-    border-radius: 10px;
-    height: 100%;
-    padding: 0.5em;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-}
-
-.clip-image > div > :first-child{
-    /* border: 1px solid #000; */
-    border-radius: 15px;
-    height: 80%;
-    background-image: url("images/Homepage/2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.clip-image > div > :last-child{
-    /* border: 1px solid #000; */
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 1em;
 }
 
-.clip-image > div > :last-child > :last-child{
-    display: flex;
-    align-items: center;
-    border: 1px solid grey;
-    padding: 0.5em;
-    gap: 0.5em;
-    border-radius: 25px;
+legend{
+    text-align: center;
+    font-size: 1.5em;
 }
 
-.clip-image > div > :last-child > :first-child > p, .clip-image > div > :last-child > :first-child > p > b, .clip-image > div > :last-child > :last-child > :last-child > p {
-    /* color: red; */
-    font-family: sans-serif;
+input{
+    background: transparent;
 }
 
-.clip-image > div > :last-child > :first-child > p > b{
+/* input:focus{
+    border: none;
+} */
+
+input::placeholder{
     color: #000;
 }
 
-div > :last-child > :last-child > :last-child > p, .clip-image > div > :last-child > :first-child > p{
-    color: grey;
-}
-
-.second-section > :nth-child(3) {
-    margin-top: 1em;
-    display: flex;
-    /* flex: 1; */
-    gap: 1em;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.second-section > :nth-child(3) > div > p{
-    font-family: sans-serif;
-    font-size: 0.85em;
-    color: gray;
-}
-
-.second-section > :nth-child(4) {
-    display: flex;
-    gap: 2em;
-    /* flex-wrap: wrap; */
-    /* flex: 1; */
-    margin-top: 2em;
-    justify-content: space-between;
-}
-
-.second-section > :nth-child(4)  div :nth-child(1) {
-    font-size: 2em;
-    font-family: sans-serif;
-}
-
-.second-section > :nth-child(4)  div :nth-child(2) {
+button{
+    background: transparent;
+    padding: 0.5em;
+    border-radius: 25px;
     font-size: 1em;
-    font-family: sans-serif;
-}
-
-.second-section > :nth-child(4)  div :nth-child(3)  {
-    color: grey;
-    font-family: sans-serif;
-    font-size: 0.85em;
-}
-
-.second-section > :nth-child(5) {
-    margin-top: 2em;
-}
-
-.second-section > :nth-child(5) > :first-child, .second-section > :nth-child(5) > :nth-child(2) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1em;
-}
-
-.second-section > :nth-child(5) > :first-child > p, .second-section > :nth-child(5) > :nth-child(2) > p{
-    font-family: sans-serif;
-}
-
-.second-section > :nth-child(5) > :nth-child(2) > p{
-    font-size: 2em;
-}
-
-/* For carousel */
-
-.slider{
-    height: 200px;
-    margin: auto;
-    /* border: 1px solid #000; */
-    position: relative;
-    /* width: 90%; */
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-}
-
-.slide-track{
-    display: flex;
-    gap: 3em;
-    width: calc(250px * 10);
-    /* border: 1px solid#000; */
-    animation: scroll 40s linear infinite;
-    animation-play-state: running;
-}
-
-.slide-track.paused{
-    animation-play-state: paused;
-}
-
-@keyframes scroll{
-    0% {
-        transform : translateX(0);
-    }
-    100%{
-        transform: translateX(calc(-250px * 7));
-    }
-}
-
-.slide{
-    /* border: 1px solid #000; */
-    height: 100px;
-    width: 250px;
-    display: flex;
-    align-items: center;
-    /* padding: 15px; */
-    perspective: 100px;
-    border-radius: 25px;
-    position: relative;
-}
-
-.slide > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-    transition: transform 1s;
-}
-
-.slide > img:hover{
-    transform: translateZ(20px);
-}
-
-.slide > p{
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    /* left: 50%;
-    bottom: 50%; */
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 1.5em;
-}
-
-/* carousel gradient shadows */
-.slider::before,
-.slider::after{
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255,255,255,0) 100%);
-    content: '';
-    height: 100%;
-    position: absolute;
-    width: 15%;
-    z-index: 2;
-}
-
-.slider::before {
-    left: 0;
-    top: 0;
-}
-
-.slider::after{
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-}
-
-.line-divide{
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    margin: 1em 0em;
-    gap: 1em;
-}
-
-.line-divide > :first-child, .line-divide > :last-child{
-    height: 0;
-}
-
-.line-divide > div{
-    font-family: sans-serif;
-}
-
-.third-section > :first-child > p{
-    font-family: sans-serif;
-    margin-bottom: 1em;
-}
-
-.third-section > :first-child > :first-child{
-    font-weight: bold;
-    font-size: 0.85em;
-}
-
-.third-section > :first-child > :nth-child(2){
-    font-size: 2em;
-}
-
-.third-section > :first-child > :last-child {
-    color: grey;
-    font-size: 0.85em;
-    margin-top: -1em;
-}
-
-/* Third section display grid M not through with it. TODO: Make it so that even if it's full laptop view it's still three a column 7/12/2025 */
-.third-section > :nth-child(2) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    /* grid-auto-rows: minmax(200px, auto); */
-    gap: 1em;
-}
-
-/* .third-section > :nth-child(2) > div{
-    border: 1px solid orange;
-} */
-
-.third-section > :nth-child(2) > div > :first-child {
-    /* border: 1px solid #000; */
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    height: 200px;
-}
-
-/* .third-section > :nth-child(2) div div {
-    border: 1px solid green;
-} */
-
-.third-section > :nth-child(2) div div img{
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-}
-
-.third-section > :nth-child(2) > div > :nth-child(2){
-    margin-top: 1em;
-}
-
-.third-section > :nth-child(2) > div > :nth-child(2) p{
-    font-family: sans-serif;
-}
-
-.third-section > :nth-child(2) > div > :nth-child(2) :first-child {
-    font-weight: bold;
-    font-size: 1;
-}
-
-.third-section > :nth-child(2) > div > :nth-child(2) :last-child {
-    color: grey;
-    margin-top: 1em;
-    font-size: 0.85em;
-}
-
-.third-section > :nth-child(2) > div > :nth-child(3){
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1em;
-}
-
-.third-section > :nth-child(2) > div > :nth-child(3) p {
-    font-family: sans-serif;
-}
-
-.third-section > :nth-child(2) > div > :nth-child(3) button {
-    border: 1px solid grey;
-    background-color: transparent;
-    font-family: sans-serif;
-    padding: 0.5em;
-    border-radius: 25px;
-}
-
-.third-section > :last-child{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin-top: 1.5em;
-}
-
-.third-section > :last-child button{
-    font-family: sans-serif;
-    background-color: #000;
-    color: #fff;
-    padding: 0.5em;
-    border-radius: 5px;
-    /* vertical-align: center; */
-    text-align: center;
-}
-
-.fourth-section{
-    margin-top: 2em;
-}
-
-.fourth-section > :first-child {
-    display: flex;
-    /* flex: 1; */
-    align-items: center;
-    justify-content: space-between;
-    gap: 2em;
-}
-
-.fourth-section > :first-child > :first-child{
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: sans-serif;
-    /* width: 500px; */
-    /* flex: 1; */
-}
-
-.fourth-section > :first-child > :last-child{
-    font-family: sans-serif;
-    color: grey;
-    width: 70%;
-}
-
-.fourth-section > :nth-child(2) {
-    /* border: 1px solid #000; */
-    margin-top: 1.5em;
-    padding: 1em;
-    border-radius: 5px;
-    background-image: url("images/Homepage/section-2\(search\ countries\)/Chureito-pagoda.jpg");
-    background-position: bottom;
-    background-color: rgba(0, 0, 0, 0.4);
-    background-blend-mode: overlay;
-    color: #fff;
-}
-
-.fourth-section > :nth-child(2) > :first-child{
-    font-family: sans-serif;
     font-weight: bold;
 }
 
-.fourth-section > :nth-child(2) > :last-child{
-    margin-top: 1em;
-    font-family: sans-serif;
-    font-size: 0.85em;
-    color: grey;
+button > a{
+    color: black;
+    text-decoration: none;
 }
 
-.fourth-section > :nth-child(3){
-    margin-top: 1.5em;
-}
-
-.fourth-section > :nth-child(3) > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: grey;
-    padding: 1em;
-}
-
-.fourth-section > :nth-child(3) > div > div{
-    font-family: sans-serif;
-}
-
-.fifth-section{
-    background-color: rgba(128, 128, 128, 0.3);
-    right: 0;
-    padding: 1em;
-    margin-top: 2em;
-    border-radius: 10px;
-}
-
-.fifth-section > :first-child > :first-child {
-    color: gray;
-    font-family: sans-serif;
-}
-
-.fifth-section > :first-child > :nth-child(2) {
-    margin-top: 0.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} 
-
-.fifth-section > :first-child > :nth-child(2) > p{
-    font-family: sans-serif;
-    font-size: 1.5em;
-}
-
-.fifth-section > :first-child > :nth-child(2) > button{
-    padding: 0.5em;
-    background-color: #000;
-    color: #fff;
-    font-family: sans-serif;
-    border-radius: 5px;
-}
-
-.fifth-section > :first-child > :nth-child(3) {
-    margin-top: 1em;
-}
-
-.fifth-section > :first-child > :nth-child(3) > p {
-    font-family: sans-serif;
-    color: grey;
-}
-
-.fifth-section >:last-child{
-    /* border: 1px solid #000; */
-    margin-top: 1em;
-    /* display: flex; */
-    gap: 1em;
-    /* flex-wrap: wrap; */
-}
-
-.fifth-section >:last-child > div{
-    display: flex;
-    /* color: red; */
-    /* border: 1px solid #000; */
-    /* flex-direction: row-reverse; */
-    gap: 0.5em;
-    justify-content: space-between;
-    /* align-items: center; */
-    /* flex-wrap: wrap; */
-}
-
-.fifth-section >:last-child > div > :first-child {
-    width: 100%;
-    border-radius: 10px;
-    /* border: 1px solid orange; */
-    /* height: 200px; */
-}
-
-.fifth-section >:last-child > div > :first-child >img{
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-}
-
-.fifth-section >:last-child > div > :last-child{
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 0.5em;
-    width: 100%;
-    /* width: 70%; */
-}
-
-.fifth-section >:last-child > div > :last-child > :first-child{
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.fifth-section >:last-child > div > :last-child > :last-child{
-    font-family: sans-serif;
-}
-
-.sixth-section{
-    /* border: 1px solid #000; */
-    margin-top: 2em;
-    border-radius: 10px;
-}
-
-.sixth-section > :first-child {
-    display: flex;
-    gap: 1.5em;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-image: url("images/Homepage/section-2\(search\ countries\)/Chureito-Pagoda.jpg");
-    background-position: center;
+body > :nth-child(2) > :last-child{
+    background-image: url("images/Homepage/section-2\(search\ countries\)/TAL-bangkok-PLACESTHAILAND1023-a9b9f017e2b54ce5acbaeb370d596aae.webp");
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-content: center;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
-    height: 50vh;
-    justify-content: center;
-    border-radius: 10px;
-    /* place-content: center; */
-    color: #fff;
+    position: relative;
 }
 
-.sixth-section > :first-child > :first-child{
-    font-family: sans-serif;
+body >  :nth-child(2) > :last-child > :first-child{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2em;
-}
-
-.sixth-section > :first-child > :nth-child(2) {
-    font-family: sans-serif;
-    font-size: 0.85em;
-    /* background-color: black; */
-}
-
-.sixth-section > :first-child > :last-child > button{
-    font: 1em sans-serif;
-    padding: 0.5em;
-    border-radius: 15px;
-}
-
-.sixth-section > :nth-child(2) {
-    /* border: 1px solid #000; */
-    margin-top: 2em;
-    display: flex;
-    justify-content: space-between;
-    /* flex-wrap: wrap; */
-    gap: 1em;
-}
-
-.sixth-section > :nth-child(2) >:first-child >:first-child{
-    display: flex;
-    align-items: center;
-    gap: 0.1em;
-}
-
-
-.sixth-section > :nth-child(2) >:first-child >:first-child > img {
-    /* border: 1px solid #000; */
-    /* color: orange; */
-    height: 80px;
-    /* width: 100px; */
-}
-
-.sixth-section-site-logo{
-    height: 100%;
-}
-
-
-.sixth-section > :nth-child(2) >:first-child >:first-child > p{
-    font-family: sans-serif;
-    font-size: 1.5em;
-}
-
-.sixth-section > :nth-child(2) >:first-child >:last-child{
-    color: gray;
-    font-family: sans-serif;
-    font-size: 0.85em;
-}
-
-/* For table */
-.clean-table{
-    width: 100%;
-    border-collapse: collapse;
-    font-family: sans-serif;
-    background: #fff;
-}
-
-.clean-table th, .clean-table td{
-    padding: 3px 16px;
-    text-align: left;
-    font-family: sans-serif;
-}
-
-.clean-table th{
-    font-weight: 600;
-    /* color: #333; */
-}
-
-.clean-table td{
     color: grey;
+    /* position: absolute;
+    top: 5em;
+    left: 50%; */
+    margin-top: -2em;
+    /* font-weight: bold; */
 }
 
-footer{
+body > :nth-child(2) > :last-child > :last-child{
+    font-family: monospace;
+    font-size: 2em;
+    font-weight: bold;
+    color: gray;
+    margin-left: 2em;
+}
+
+/* .confirm{
     display: flex;
-    gap: 1.5em;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer > :first-child {
-    display: flex;
-    gap: 1em;
-}
-
-footer > :first-child > p{
-    font-family: sans-serif;
-}
-
-footer > :nth-child(2) {
-    font-family: sans-serif;
-}
-
-footer > :last-child {
-    display: flex;
-    gap: 0.5em;
-}
-
-footer > :last-child > div {
-    /* border: 1px solid #000; */
-    height: 35px;
-    border-radius: 100%;
-    padding: 3px;
-    /* background-color: gray; */
-}
-
-footer > :last-child > div > img {
-    height: 100%;
-    border-radius: 100%;
-}
-
-/* .clean-table tbody tr{
-    transition: background 0.2s ease;
-}
-
-.clean-table tbody tr:hover{
-    background: #f5f5f5; soft hover only
 } */
 
-
-@media (max-width:564px) {
-    .first-section{
-        /* align-items: flex-end; */
-        /* width: 50%; */
-        flex-direction: column;
-        /* justify-conten; */
-        align-items: flex-start;
-        /* gap: 100em; */
-        /* padding: 0em; */
-    }
-
-    /* .first-section > div{
-        color: red;
-        width: 100%;
-        border: 1px solid #000;
-    } */
-
-    .location-socials, .pitch{
-        width: 50%;
-    }
-
-    .location-socials{
-        margin-top: -1em;
-        /* gap: -5em; */
-        font-size: 0.8em;
-    }
-
-    .location-socials > :first-child{
-        /* overflow: scroll; */
-        /* flex-wrap: nowrap; */
-        /* font-size: 0.8em; */
-        margin-right: 1em;
-    }
-
-    .travel-info{
-        width: 50%;
-        /* display: none; */
-        right: -0.5em;
-        background-color: rgba(128, 128, 128, 0.1);
-        backdrop-filter: blur(10px);
-        /* -webkit-backdrop-filter: blur(10px); for safari */
-    }
-
-    .transportation{
-        /* overflow: scroll; */
-        flex-wrap: wrap;
-        gap: 0.5em;
-    }
-
-    .Filters > :last-child {
-    /* flex-direction: row; */
-    display: flex;
-    gap: 0.5em;
-    /* overflow: scroll; */
-    flex-wrap: wrap;
-    /* width: 80%; */
+/*  for giding signup or login*/
+.hide{
+    display: none;
 }
 
-.sixth-section > :nth-child(2) {
-    flex-wrap: wrap;
+.hide.show{
+    display: block;
 }
-
-footer{
-    /* flex: 1; */
-    flex-wrap: wrap;
-}
-
-/* .departure > div{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-} */
-}
-
-@media (max-width: 710px) {
-    /* Two choices for this shit either I move it to  a smaller media of 400-360px or properly arrange it, once I'm through*/
-    /* .travel-info{
-        width: 250px;
-        height: 300px;
-    } */
-    .transportation{
-        gap: 0em;
-        flex-wrap: wrap;
+@media (max-width: 500px) {
+    body >  :nth-child(2){
+        display: block;
+        /* padding: 0.5em; */
     }
-
-    .destination-date{
-        gap: 0em;
-        flex-wrap: wrap;
-    }
-    /* I may move this shit to around 400 - 360 px. NOTE: I'm talking about the first-section */
-
-    .first-section{
-        background-position: bottom;
-        gap: 2em;
-        padding: 1em;
-    }
-
-    .first-section > div > h1{
-        font-size: 1.5em;
-    }
-
-    .location-socials{
-        gap: 1.5em;
-    }
-
-    nav{
-        transition: opacity 0.5s;
-        opacity: 1;
-        margin-left: -0.63em;
-    }
-    
-    nav.nav-active{
-        opacity: 0;
-    }
-
-    .search-svg{
+    body > :nth-child(2) > :last-child {
         display: none;
-    }
-
-    .profile,.profile-picture,.profile-info{
-        display: none;
-    }
-
-    .nav-ul-parent{
-        display: none;
-    }
-
-    .nav-menu-icon > button{
-        background: none;
-    }
-
-    .mobile-nav{
-        background-color: rgba(128, 128, 128, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px); /*for safari*/
-        position: fixed;
-        top: 0;
-        right: 1em;
-        /* left: 2em; */
-        z-index: 101;
-        pointer-events: auto;
-        /* cursor: crosshair; */
-        margin-top: 0.5em;
-        /* margin-right: 1em; */
-        padding: 0.5em;
-        border-radius: 15px;
-        width: 250px;
-        transform: translateY(-300px);
-        transition: transform 0.5s, opacity 0.5s;
-        opacity: 0;
-    }
-
-    .mobile-nav.mobile-nav-active{
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .mobile-nav > ul{
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        list-style: none;
-    }
-
-    .mobile-nav > ul > li > a{
-        text-decoration: none;
-        color: #000;
-    }
-
-    .mobile-profile{
-        display: flex;
-        gap: 0.5em;
-        font-weight: bold;
-        /* font-family: Arial, Helvetica, sans-serif; */
-        margin-bottom: 0.5em;
-        align-items: center;
-    }
-
-    .mobile-profile-picture{
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-    }
-
-    .mobile-profile-picture > img{
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-    }
-
-    .mobile-nav-menu{
-        position: fixed;
-        top: 0;
-        right: 1em;
-        margin-top: 0.7em;
-        margin-right: 0.3em;
-    }
-
-    footer>:last-child{
-        flex-wrap: wrap;
-    }
-}
-
-@media (min-width: 710.5px) {
-    .inner-search-svg, .mobile-profile, .mobile-nav, .nav-menu-icon{
-        display: none;
-    }
-
-    /* third section grid */
-    .third-section > :nth-child(2) {
-        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -83,7 +83,7 @@ echo('heldddl');
                 const selectvalue = option.dataset.value;
                 const formData = new FormData();
                 formData.append("guests", selectvalue);
-                fetch("index.php", {
+                fetch("dashboard.php", {
                     method: "POST",
                     body: formData
                 }).then(res => res.json()).then(data => {
